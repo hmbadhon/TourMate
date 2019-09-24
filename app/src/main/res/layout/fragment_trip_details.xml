@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".TripDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/detailsbody">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_details"
+            android:textAllCaps="true"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_name"
+            android:textAllCaps="true"
+            android:textColor="@color/colorwhite"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_name"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:textColorHint="@color/colorwhite"
+            android:textColor="@color/colorwhite"
+            android:drawableStart="@drawable/trip"
+            android:id="@+id/tripnameTV"
+            android:drawablePadding="10dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_description"
+            android:textAllCaps="true"
+            android:textColor="@color/colorwhite"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_description"
+            android:textColorHint="@color/colorwhite"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp"
+            android:drawableStart="@drawable/cmnt"
+            android:id="@+id/tripdesTV"
+            android:inputType="textShortMessage"
+            android:drawablePadding="10dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_start_date"
+            android:textAllCaps="true"
+            android:textColor="@color/colorwhite"
+            android:layout_marginTop="10dp"
+            android:textSize="10sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_start_date"
+            android:textColorHint="@color/colorwhite"
+            android:textColor="@color/colorwhite"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/datepicker"
+            android:inputType="none"
+            android:keyboardNavigationCluster="false"
+            android:id="@+id/tripstartTV"
+            android:drawablePadding="10dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trip_end_date"
+            android:textAllCaps="true"
+            android:textColor="@color/colorwhite"
+            android:layout_marginTop="10dp"
+            android:textSize="10sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_end_date"
+            android:textColorHint="@color/colorwhite"
+            android:textSize="20sp"
+            android:textColor="@color/colorwhite"
+            android:drawableLeft="@drawable/datepicker"
+            android:inputType="none"
+            android:keyboardNavigationCluster="false"
+            android:id="@+id/tripendTV"
+            android:drawablePadding="10dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/detailsbody">
+        <TextView
+            android:layout_width="0dp"
+            android:background="@color/colorwhite"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/walletbtn"
+            android:text="@string/wallet"
+            android:id="@+id/walletTV"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@color/colorblack"/>
+        <TextView
+            android:layout_width="0dp"
+            android:background="@color/colorwhite"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/camera"
+            android:text="@string/camera"
+            android:id="@+id/cameraTV"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/colorblack"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/colorwhite"
+        app:srcCompat="@drawable/editbtn"
+        android:id="@+id/editbtn"
+
+        />
+
+
+
+</RelativeLayout>
